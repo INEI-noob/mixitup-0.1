@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -18,10 +22,20 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".", // Add this line to set the base directory to the root
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "src/*"
+      ] // Correct alias to resolve to src
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+, "src/app/api/auth/[...nextauth]/[...nextauth]"  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
